@@ -34,6 +34,7 @@ public class Main {
   }
 
   private static String readIntoString(InputStream in) throws IOException {
+      if(in == null) { return new String(""); }
       StringBuilder sb = new StringBuilder();
       BufferedReader r = new BufferedReader(new InputStreamReader(in, "UTF-8"));
       String line = null;
